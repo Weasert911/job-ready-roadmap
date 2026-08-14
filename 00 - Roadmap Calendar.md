@@ -1,0 +1,378 @@
+# GET JOB READY — ROADMAP CALENDAR
+
+> **August 14, 2026 → January 1, 2027**
+> Become a credible junior/intern/contract-level **Rust + TypeScript systems/devtooling engineer**.
+
+**The one rule:** weekly deliverables, not daily schedules. You decide when/how you work. **Sunday is the deadline.**
+
+---
+
+## THE JANUARY TARGET
+
+### Technical ability
+- Strong Rust fundamentals, intermediate/advanced Rust, async Rust, Tokio, Axum
+- CLI development, HTTP/networking, concurrency, filesystem/process interaction
+- PostgreSQL + SQL, TypeScript, Node.js, React fundamentals
+- Docker, Linux, Git/GitHub, CI/CD, testing, debugging, logging/tracing, basic production deployment
+
+### Evidence
+| Evidence | Target |
+| --- | --- |
+| Flagship project | **1** serious project (not ten) |
+| OSS contributions | **3–8** meaningful, ideally merged PRs |
+| GitHub profile | Polished |
+| Resume | 1 page, one-pager |
+| Portfolio | 1 site |
+| Demo | 1 technical project demo/video |
+| **The real test** | You can explain every significant technical decision **without hiding behind AI** |
+
+---
+
+## MASTER CALENDAR
+
+| # | Phase | Dates | Theme | Deliverable by Sunday |
+| --- | --- | --- | --- | --- |
+| P0 | SETUP | Aug 14 – Aug 16 | Establish the battlefield | **Environment completely ready** |
+| 1 | RUST | Aug 17 – Aug 23 | Rust fundamentals (ownership, borrowing, Option, Result) | 3 small Rust programs + Rustlings |
+| 2 | RUST | Aug 24 – Aug 30 | Data modeling + Cargo | First proper CLI: `filegrep` |
+| 3 | RUST | Aug 31 – Sep 6 | Engineering (traits, generics, lifetimes, testing, Clippy) | `filegrep` v2: maintainable software |
+| 4 | SYSTEMS | Sep 7 – Sep 13 | Systems Rust (filesystem, processes, OS interaction) | `procpeek` / `devrun` |
+| 5 | NETWORKING | Sep 14 – Sep 20 | Networking + HTTP (TCP, REST, JSON, serde, reqwest) | `devfetch`: polished API client CLI |
+| 6 | ASYNC | Sep 21 – Sep 27 | Async Rust (futures, Tokio, tasks, channels) | `parallel-fetcher` |
+| 7 | BACKEND | Sep 28 – Oct 4 | Axum (routing, handlers, extractors, middleware, state) | Rust REST API with real business logic |
+| 8 | DATABASE | Oct 5 – Oct 11 | PostgreSQL + sqlx (schema, migrations, transactions) | Backend connected to PostgreSQL |
+| 9 | TESTING | Oct 12 – Oct 18 | Testing, tracing, validation, "boringly reliable" | Hardened, trustworthy backend |
+| 10 | LINUX+DOCKER | Oct 19 – Oct 25 | Linux operations + Docker (images, compose, volumes) | Containerized backend + Postgres: `docker compose up` |
+| 11 | TYPESCRIPT | Oct 26 – Nov 1 | TypeScript + Node.js fundamentals | TS CLI talking to your Rust backend |
+| 12 | REACT | Nov 2 – Nov 8 | React fundamentals (components, hooks, forms, API calls) | Frontend for your Rust backend |
+| 13 | FLAGSHIP | Nov 9 – Nov 15 | **Flagship project begins — stack is frozen** | Spec, architecture, repo, issue tracker, roadmap |
+| 14 | FLAGSHIP | Nov 16 – Nov 22 | Core engine (Rust, CLI, fs/process, config) | Core functionality works end-to-end |
+| 15 | FLAGSHIP | Nov 23 – Nov 29 | Backend + data (API, Postgres, persistence, logging) | Usable product, not prototype |
+| 16 | FLAGSHIP | Nov 30 – Dec 6 | Full stack (TypeScript interface / web UI) | Someone other than you can use it |
+| 17 | FLAGSHIP | Dec 7 – Dec 13 | Production hardening (security, CI, Docker, tests) | Production-ish, showable to an engineer |
+| 18 | OSS | Dec 14 – Dec 20 | Real open source contributions | **≥ 2 serious PRs submitted** |
+| 19 | PORTFOLIO | Dec 21 – Dec 27 | GitHub, portfolio site, resume, interview prep | Applicant-ready artifacts |
+| 20 | FINAL | Dec 28 – Jan 1 | Final war prep (no new tech!) | Everything finished + application spreadsheet |
+| ✅ | **GO** | **Jan 1, 2027** | **Applying while continuing to improve** | Weekly cycle: Applications + OSS + Interview prep + Engineering |
+
+---
+
+## PHASE 0 — SETUP (Aug 14–16)
+
+### Goal: establish the battlefield
+- ✅ Rust toolchain (rustc 1.96.0) + Cargo + rustup
+- ✅ rust-analyzer (Zed)
+- ✅ Git 2.52.0 + GitHub (gh CLI, logged in as Weasert911)
+- ✅ Node v24.11.0 + npm 11.6.1
+- ⬜ TypeScript
+- ⬜ PostgreSQL — **DEFERRED, install before Week 8** (winget install PostgreSQL.PostgreSQL.17)
+- ✅ WSL2 + Ubuntu (for Linux work)
+- ⬜ Docker — **SKIPPED FOR NOW, install before Week 10**
+- ✅ Zed editor
+
+### Deliverables
+- [ ] GitHub repository for learning/work log (created: `job-ready-roadmap`)
+- [ ] Skills document (`01 - Skills.md`)
+- [ ] Weekly tracker (`02 - Weekly Tracker.md`)
+
+---
+
+## WEEK-BY-WEEK DETAIL
+
+### WEEK 1 — Aug 17–23 · Rust fundamentals
+**Learn:** variables, mutability, scalar/compound types, functions, expressions, control flow, ownership, borrowing, references, slices, structs, enums, `match`, `Option`, `Result`.
+
+**Deliverable:** 3 small Rust programs (file analyzer, text statistics tool, terminal utility) + relevant Rustlings exercises.
+
+**Sunday test — you can explain:**
+1. Why does Rust have ownership?
+2. What's the difference between `String` and `&str`?
+3. What does borrowing mean?
+4. Why does this code fail to compile?
+
+---
+
+### WEEK 2 — Aug 24–30 · Rust data modeling + CLI
+**Learn:** structs, enums, pattern matching, methods, associated functions, modules, visibility, `Vec`, `HashMap`, `HashSet`, iterators, closures, Cargo, dependencies, crates, project structure.
+
+**Deliverable — `filegrep`:**
+```text
+filegrep "TODO" ./project
+filegrep "fn main" ./src
+```
+Parses arguments, traverses files, searches text, handles errors, produces useful output.
+
+**Sunday standard:** someone else can clone it and run it.
+
+---
+
+### WEEK 3 — Aug 31 – Sep 6 · Rust engineering
+**Learn:** error handling, custom errors, `Result`, `?`, traits, generics, lifetimes, smart pointers, testing, integration tests, documentation, formatting, Clippy.
+
+**Deliverable:** `filegrep` v2 — maintainable software: proper modules, tests, docs, error handling, CLI help, configuration, better architecture.
+
+**Sunday standard:** you can explain your project's architecture.
+
+---
+
+### WEEK 4 — Sep 7–13 · Systems Rust begins
+**Learn:** filesystem APIs, directories, paths, file handles, stdin/stdout/stderr, env vars, spawning processes, exit codes, signals, OS interaction.
+
+**Understand:** `program → process → OS → filesystem`
+
+**Deliverable:** `procpeek` or `devrun` — launches commands, captures output, reports failures.
+
+**Sunday standard:** you understand what actually happens when your program launches another program.
+
+---
+
+### WEEK 5 — Sep 14–20 · Networking + HTTP
+**Learn:** IP, ports, TCP, HTTP, request/response, headers, status codes, JSON, REST, serialization. Rust: `serde`, `reqwest`.
+
+**Deliverable — `devfetch`:** polished API-consuming CLI (requests, serialization, deserialization, errors, timeouts, bad responses).
+
+---
+
+### WEEK 6 — Sep 21–27 · Async Rust (major milestone)
+**Learn:** futures, async/await, Tokio, tasks, spawning, channels, synchronization, concurrency vs parallelism, blocking vs non-blocking. Understand **why async exists**.
+
+**Deliverable — `parallel-fetcher`:**
+```text
+parallel-fetcher urls.txt
+```
+Fetches 20 URLs concurrently, produces results.
+
+**Sunday test:** What's a Future? What's a Tokio task? Why shouldn't blocking work happen inside async code? Concurrency vs parallelism?
+
+---
+
+### WEEK 7 — Sep 28 – Oct 4 · Rust backend
+**Learn:** Axum: routing, handlers, extractors, middleware, JSON APIs, state, error responses, auth concepts.
+
+**Deliverable — REST API with real business logic:**
+```text
+POST /projects
+GET /projects
+GET /projects/:id
+PATCH /projects/:id
+DELETE /projects/:id
+```
+No Todo app unless radically expanded.
+
+**Sunday standard:** you can create a working backend from scratch without a tutorial.
+
+---
+
+### WEEK 8 — Oct 5–11 · PostgreSQL
+**Learn:** relational modeling, tables, PKs, FKs, constraints, joins, indexes, transactions, normalization, migrations, query performance basics. Rust: `sqlx`.
+
+**Deliverable:** backend connected to PostgreSQL: schema, migrations, CRUD, transactions, validation, error handling.
+
+**Sunday standard:** you can design a schema without an ORM generating everything.
+
+---
+
+### WEEK 9 — Oct 12–18 · Testing + production code
+**Stop adding features.** Learn: unit/integration/API testing, test databases, mocking, error handling, validation, logging, `tracing`.
+
+**Deliverable:** backend is "boringly reliable": meaningful tests, structured logs, proper errors, input validation, edge cases.
+
+**Sunday standard:** you trust your backend enough for another developer to use.
+
+---
+
+### WEEK 10 — Oct 19–25 · Linux + Docker
+**Linux:** filesystem, permissions, processes, environment, SSH, package management, services, logs, networking basics, shell commands.
+**Docker:** images, containers, Dockerfiles, volumes, networks, Compose.
+
+> ⚠️ **Install Docker before this week.**
+
+**Deliverable:** containerize backend + PostgreSQL. `docker compose up` = dev environment running.
+
+**Sunday standard:** you can deploy/run software without an IDE holding your hand.
+
+---
+
+### WEEK 11 — Oct 26 – Nov 1 · TypeScript
+**Learn:** types, interfaces, unions, intersections, generics, narrowing, utility types, modules, async/await, promises, error handling, package management, Node.js, HTTP clients.
+
+**Deliverable — TypeScript CLI talking to your Rust backend:**
+```text
+TypeScript CLI → HTTP → Rust backend → PostgreSQL
+```
+
+---
+
+### WEEK 12 — Nov 2–8 · React + full stack
+**Learn:** components, props, state, hooks, forms, API calls, routing, loading/error states, basic frontend architecture.
+
+**Deliverable:** frontend for your Rust backend:
+```text
+React → Rust/Axum → PostgreSQL
+```
+
+**Sunday standard:** you can independently connect frontend → backend → database.
+
+---
+
+### WEEK 13 — Nov 9–15 · FLAGSHIP BEGINS
+**Stack is frozen. No new framework hunting.**
+
+**Category (choose at this week):** scaffolding tool · dev environment manager · API development tool · local service manager · code/project analyzer · build/deployment tool · dev workflow automation · Rust/TS project manager.
+
+**Deliverable:** written specification, architecture, repository, issue tracker, initial implementation, development roadmap.
+
+---
+
+### WEEK 14 — Nov 16–22 · Flagship: core engine
+**Prioritize:** architecture, Rust, CLI, filesystem/process interaction, configuration, error handling. Correct over beautiful.
+
+**Deliverable:** core functionality works end-to-end.
+
+---
+
+### WEEK 15 — Nov 23–29 · Flagship: backend + data
+**Add only what the product needs:** API, PostgreSQL, persistence, auth if necessary, background tasks, configuration, logging. No resume-driven features.
+
+**Deliverable:** usable product, not a prototype.
+
+---
+
+### WEEK 16 — Nov 30 – Dec 6 · Flagship: full stack
+**Add TypeScript interface:**
+```text
+Rust CLI → Rust backend → PostgreSQL
+              ↑
+       TypeScript web UI
+```
+
+**Deliverable:** someone other than you can actually use it.
+
+---
+
+### WEEK 17 — Dec 7–13 · Production hardening
+**Learn/apply:** security basics, auth security, input validation, rate limiting concepts, secrets, env configuration, logging, graceful failures, DB backups, health checks.
+
+**Add:** tests, CI, Docker, deployment.
+
+**Deliverable:** production-ish — confidently showable to an engineer.
+
+---
+
+### WEEK 18 — Dec 14–20 · Open source week
+**Find real Rust/TypeScript repos**, beginner-friendly issues, docs, tests, bug fixes, small features, tooling.
+
+**Contribution flow:**
+```text
+Issue → Understand codebase → Fork → Branch → Implement → Test → PR → Review → Revision → Merge
+```
+
+**Deliverable:** ≥ **2 serious PRs submitted** (no spam, no typo farming).
+
+---
+
+### WEEK 19 — Dec 21–27 · Portfolio + resume + interview prep
+**GitHub:** pinned repos, README, docs, contribution history, profile.
+**Portfolio:** About · Skills · Flagship project · OSS · Contact. Nothing more.
+**Resume:** one page. What you built, what you contributed, technical depth, measurable results. No "passionate developer" fluff.
+
+---
+
+### WEEK 20 — Dec 28 – Jan 1 · Final war prep
+**Do NOT start anything new. NO Kubernetes.**
+
+**Finish:** flagship, documentation, portfolio, resume, GitHub, demo video, OSS PRs, LinkedIn/GitHub presence, application spreadsheet, target-company list.
+
+**Practice explaining — Rust:** ownership, borrowing, lifetimes, traits, async, concurrency, error handling.
+**Backend:** REST, HTTP, databases, transactions, authentication, caching concepts.
+**Systems:** processes, threads, TCP, memory, filesystems, OS concepts.
+
+**Your project (the biggest one):**
+- Why did you build it? Why Rust? Why this architecture? Why this database?
+- What was the hardest bug? What would you change?
+- How does concurrency work? How would you scale it?
+- What happens if the DB dies? How did you test it? What would you build next?
+
+> If you can't explain your own project, **you're not ready.**
+
+---
+
+## JAN 1, 2027 — GO
+
+> Not "I need to learn more before applying."
+> **"I'm applying while continuing to improve."**
+
+```text
+Applications + OSS + Interview preparation + Engineering work + Continued Rust depth
+```
+
+---
+
+## WEEKLY OPERATING SYSTEM
+
+Work however you want (2 hours one day, 8 another, zero when school demands). **The weekly deliverable is what matters.**
+
+| Metric | Weekly target |
+| --- | --- |
+| Coding | 15–25 focused hours |
+| Rust | Every week |
+| Shipped work | ≥ 1 meaningful deliverable |
+| Documentation | ≥ 1 meaningful update |
+
+> School comes first when necessary. No sacrificing academics for GitHub streaks.
+
+---
+
+## NON-NEGOTIABLE RULES
+
+1. **No tutorial hell** — watch → understand → close → rebuild from memory.
+2. **AI allowed, but don't outsource your brain** — for every important piece of code, understand what it does, why it works, alternatives, failure modes, tradeoffs.
+3. **Build before you feel ready** — "I don't know enough" is not a reason to wait.
+4. **One flagship project** — `ONE GOOD PROJECT + REAL OSS CONTRIBUTIONS + SOLID FUNDAMENTALS`. That's the story.
+
+---
+
+## FINAL PROGRESSION
+
+```text
+              YOU — JAN 2027
+                    │
+         ┌──────────┴──────────┐
+         │                     │
+       RUST                TYPESCRIPT
+         │                     │
+   ┌─────┼─────┐          ┌────┴────┐
+   │     │     │          │         │
+Systems Async DevTools   Node      React
+   │     │     │          │         │
+   └─────┴─────┘          └────┬────┘
+             │                 │
+             └───────┬─────────┘
+                     │
+                 PostgreSQL
+                     │
+                  Docker
+                     │
+                   Linux
+                     │
+               Git + CI/CD
+                     │
+                     ▼
+             SHIPPED SOFTWARE
+                     │
+              ┌──────┴──────┐
+              │             │
+         FLAGSHIP APP     OSS PRs
+              │             │
+              └──────┬──────┘
+                     ▼
+               JOB APPLICATIONS
+```
+
+---
+
+## DEFINITION OF READY
+
+> **"Here's a serious piece of software I built. Here's its source. Here's the deployment. Here's how I tested it. Here's the architecture. Here's the OSS code I contributed. Here's what I know about Rust and systems. Give me a ticket and I'll figure it out."**
+
+**That's the person a startup can consider hiring.**
