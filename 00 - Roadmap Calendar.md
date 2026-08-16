@@ -1,9 +1,9 @@
 # GET JOB READY — ROADMAP CALENDAR
 
 > **August 14, 2026 → January 1, 2027**
-> Become a credible junior/intern/contract-level **Rust + TypeScript systems/devtooling engineer**.
+> Become a credible junior/intern/contract-level **systems + developer tooling engineer: Rust-first, TypeScript-second, with a path to full-stack and Tauri desktop software**.
 
-**The one rule:** weekly deliverables, not daily schedules. You decide when/how you work. **Sunday is the deadline.**
+**The one rule:** every topic produces working evidence. Weekly deliverables, not daily schedules. You decide when/how you work. **Sunday is the competency deadline.**
 
 ---
 
@@ -26,6 +26,30 @@
 | Demo | 1 technical project demo/video |
 | **The real test** | You can explain every significant technical decision **without hiding behind AI** |
 
+### Competency, not coverage
+
+The phases, dates, domains, and career direction in this roadmap stay fixed. What changes is the definition of progress: a topic is complete only after you independently implement it in a proportionate project and pass the Sunday evaluation.
+
+```text
+TOPIC
+  -> understand the problem it solves
+  -> use the relevant resource and code along
+  -> close the resource and rebuild from memory
+  -> experiment, break it intentionally, and fix it
+  -> build the topic project in 01 - Skills.md
+  -> explain the concept and implementation
+  -> PASS / FAIL
+```
+
+Pass requires `Understanding = YES`, `Implementation = YES`, `Project = YES`, and `Explanation = YES`. A copied implementation, an unexplained implementation, or theory without working code is a fail. Record evidence in `02 - Weekly Tracker.md` and `03 - Project Archive.md`.
+
+Topic projects are focused competency proofs. Existing weekly deliverables are composition projects that combine those proofs into progressively more realistic software:
+
+```text
+concept -> topic project -> composition project -> production system
+        -> open source -> selected portfolio evidence -> job readiness
+```
+
 ---
 
 ## MASTER CALENDAR
@@ -33,9 +57,9 @@
 | # | Phase | Dates | Theme | Deliverable by Sunday |
 | --- | --- | --- | --- | --- |
 | P0 | SETUP | Aug 14 – Aug 16 | Establish the battlefield | **Environment completely ready** |
-| 1 | RUST | Aug 17 – Aug 23 | Rust fundamentals (ownership, borrowing, Option, Result) | 3 small Rust programs + Rustlings |
-| 2 | RUST | Aug 24 – Aug 30 | Data modeling + Cargo | First proper CLI: `filegrep` |
-| 3 | RUST | Aug 31 – Sep 6 | Engineering (traits, generics, lifetimes, testing, Clippy) | `filegrep` v2: maintainable software |
+| 1 | RUST | Aug 17 – Aug 23 | Rust fundamentals (ownership, borrowing, Option, Result) | Topic proofs + 3 small Rust composition programs + Rustlings |
+| 2 | RUST | Aug 24 – Aug 30 | Data modeling + Cargo | Topic proofs + first proper CLI: `filegrep` |
+| 3 | RUST | Aug 31 – Sep 6 | Engineering (traits, generics, lifetimes, testing, Clippy) | Topic proofs + `filegrep` v2: maintainable software |
 | 4 | SYSTEMS | Sep 7 – Sep 13 | Systems Rust (filesystem, processes, OS interaction) | `procpeek` / `devrun` |
 | 5 | NETWORKING | Sep 14 – Sep 20 | Networking + HTTP (TCP, REST, JSON, serde, reqwest) | `devfetch`: polished API client CLI |
 | 6 | ASYNC | Sep 21 – Sep 27 | Async Rust (futures, Tokio, tasks, channels) | `parallel-fetcher` |
@@ -82,7 +106,9 @@
 ### WEEK 1 — Aug 17–23 · Rust fundamentals
 **Learn:** variables, mutability, scalar/compound types, functions, expressions, control flow, ownership, borrowing, references, slices, structs, enums, `match`, `Option`, `Result`.
 
-**Deliverable:** 3 small Rust programs (file analyzer, text statistics tool, terminal utility) + relevant Rustlings exercises.
+**Topic evidence:** complete the matching Rust projects in `01 - Skills.md` for variables, functions/control flow, ownership/borrowing, and structs/enums/result modeling. Use Rustlings as practice, not proof.
+
+**Composition deliverable:** 3 small Rust programs (file analyzer, text statistics tool, terminal utility) that deliberately reuse the week's concepts.
 
 **Sunday test — you can explain:**
 1. Why does Rust have ownership?
@@ -95,7 +121,9 @@
 ### WEEK 2 — Aug 24–30 · Rust data modeling + CLI
 **Learn:** structs, enums, pattern matching, methods, associated functions, modules, visibility, `Vec`, `HashMap`, `HashSet`, iterators, closures, Cargo, dependencies, crates, project structure.
 
-**Deliverable — `filegrep`:**
+**Topic evidence:** pass the matching projects for pattern matching/methods, modules/Cargo, and collections/iterators/closures.
+
+**Composition deliverable — `filegrep`:**
 ```text
 filegrep "TODO" ./project
 filegrep "fn main" ./src
@@ -109,7 +137,9 @@ Parses arguments, traverses files, searches text, handles errors, produces usefu
 ### WEEK 3 — Aug 31 – Sep 6 · Rust engineering
 **Learn:** error handling, custom errors, `Result`, `?`, traits, generics, lifetimes, smart pointers, testing, integration tests, documentation, formatting, Clippy.
 
-**Deliverable:** `filegrep` v2 — maintainable software: proper modules, tests, docs, error handling, CLI help, configuration, better architecture.
+**Topic evidence:** pass the projects for custom errors, traits/generics/lifetimes, smart pointers, and testing/tooling.
+
+**Composition deliverable:** `filegrep` v2 — maintainable software: proper modules, tests, docs, error handling, CLI help, configuration, better architecture.
 
 **Sunday standard:** you can explain your project's architecture.
 
@@ -120,7 +150,9 @@ Parses arguments, traverses files, searches text, handles errors, produces usefu
 
 **Understand:** `program → process → OS → filesystem`
 
-**Deliverable:** `procpeek` or `devrun` — launches commands, captures output, reports failures.
+**Topic evidence:** pass the matching Rust and Systems projects for filesystem, streams/environment, process execution, OS/process modeling, and permissions.
+
+**Composition deliverable:** `procpeek` or `devrun` — launches commands, captures output, reports failures.
 
 **Sunday standard:** you understand what actually happens when your program launches another program.
 
@@ -129,14 +161,18 @@ Parses arguments, traverses files, searches text, handles errors, produces usefu
 ### WEEK 5 — Sep 14–20 · Networking + HTTP
 **Learn:** IP, ports, TCP, HTTP, request/response, headers, status codes, JSON, REST, serialization. Rust: `serde`, `reqwest`.
 
-**Deliverable — `devfetch`:** polished API-consuming CLI (requests, serialization, deserialization, errors, timeouts, bad responses).
+**Topic evidence:** pass the networking, TCP, REST/HTTP, JSON serialization, and error-response projects.
+
+**Composition deliverable — `devfetch`:** polished API-consuming CLI (requests, serialization, deserialization, errors, timeouts, bad responses).
 
 ---
 
 ### WEEK 6 — Sep 21–27 · Async Rust (major milestone)
 **Learn:** futures, async/await, Tokio, tasks, spawning, channels, synchronization, concurrency vs parallelism, blocking vs non-blocking. Understand **why async exists**.
 
-**Deliverable — `parallel-fetcher`:**
+**Topic evidence:** pass the async/Tokio and concurrency projects. Measure or explain bounded versus unbounded work; merely using `.await` does not pass.
+
+**Composition deliverable — `parallel-fetcher`:**
 ```text
 parallel-fetcher urls.txt
 ```
@@ -149,7 +185,9 @@ Fetches 20 URLs concurrently, produces results.
 ### WEEK 7 — Sep 28 – Oct 4 · Rust backend
 **Learn:** Axum: routing, handlers, extractors, middleware, JSON APIs, state, error responses, auth concepts.
 
-**Deliverable — REST API with real business logic:**
+**Topic evidence:** pass the Axum project plus the matching HTTP contract, validation, and typed error projects.
+
+**Composition deliverable — REST API with real business logic:**
 ```text
 POST /projects
 GET /projects
@@ -166,7 +204,9 @@ No Todo app unless radically expanded.
 ### WEEK 8 — Oct 5–11 · PostgreSQL
 **Learn:** relational modeling, tables, PKs, FKs, constraints, joins, indexes, transactions, normalization, migrations, query performance basics. Rust: `sqlx`.
 
-**Deliverable:** backend connected to PostgreSQL: schema, migrations, CRUD, transactions, validation, error handling.
+**Topic evidence:** pass all PostgreSQL projects and the `sqlx` persistence project. SQL design and query evidence must exist independently of framework code generation.
+
+**Composition deliverable:** backend connected to PostgreSQL: schema, migrations, CRUD, transactions, validation, error handling.
 
 **Sunday standard:** you can design a schema without an ORM generating everything.
 
@@ -175,7 +215,9 @@ No Todo app unless radically expanded.
 ### WEEK 9 — Oct 12–18 · Testing + production code
 **Stop adding features.** Learn: unit/integration/API testing, test databases, mocking, error handling, validation, logging, `tracing`.
 
-**Deliverable:** backend is "boringly reliable": meaningful tests, structured logs, proper errors, input validation, edge cases.
+**Topic evidence:** pass the tracing, debugging, testing-strategy, health/graceful-failure, configuration/secrets, and relevant backend hardening projects.
+
+**Composition deliverable:** backend is "boringly reliable": meaningful tests, structured logs, proper errors, input validation, edge cases.
 
 **Sunday standard:** you trust your backend enough for another developer to use.
 
@@ -187,7 +229,9 @@ No Todo app unless radically expanded.
 
 > ⚠️ **Install Docker before this week.**
 
-**Deliverable:** containerize backend + PostgreSQL. `docker compose up` = dev environment running.
+**Topic evidence:** pass the Linux and Docker topic projects. Use disposable drills where root access or destructive experiments are involved.
+
+**Composition deliverable:** containerize backend + PostgreSQL. `docker compose up` = dev environment running.
 
 **Sunday standard:** you can deploy/run software without an IDE holding your hand.
 
@@ -196,7 +240,9 @@ No Todo app unless radically expanded.
 ### WEEK 11 — Oct 26 – Nov 1 · TypeScript
 **Learn:** types, interfaces, unions, intersections, generics, narrowing, utility types, modules, async/await, promises, error handling, package management, Node.js, HTTP clients.
 
-**Deliverable — TypeScript CLI talking to your Rust backend:**
+**Topic evidence:** pass all non-React TypeScript projects. The Node CLI should reuse their modules rather than replace them with a tutorial implementation.
+
+**Composition deliverable — TypeScript CLI talking to your Rust backend:**
 ```text
 TypeScript CLI → HTTP → Rust backend → PostgreSQL
 ```
@@ -206,7 +252,9 @@ TypeScript CLI → HTTP → Rust backend → PostgreSQL
 ### WEEK 12 — Nov 2–8 · React + full stack
 **Learn:** components, props, state, hooks, forms, API calls, routing, loading/error states, basic frontend architecture.
 
-**Deliverable:** frontend for your Rust backend:
+**Topic evidence:** pass both React projects with deliberate ownership of state and complete loading, empty, success, validation, and failure behavior.
+
+**Composition deliverable:** frontend for your Rust backend:
 ```text
 React → Rust/Axum → PostgreSQL
 ```
@@ -221,6 +269,8 @@ React → Rust/Axum → PostgreSQL
 **Category (choose at this week):** scaffolding tool · dev environment manager · API development tool · local service manager · code/project analyzer · build/deployment tool · dev workflow automation · Rust/TS project manager.
 
 **Deliverable:** written specification, architecture, repository, issue tracker, initial implementation, development roadmap.
+
+**Selection gate:** choose a flagship because it solves a credible developer problem and composes proven competencies. Do not choose it to justify unlearned frameworks.
 
 ---
 
@@ -257,6 +307,8 @@ Rust CLI → Rust backend → PostgreSQL
 
 **Deliverable:** production-ish — confidently showable to an engineer.
 
+**Evidence gate:** deployment and hardening only pass when setup is reproducible, failures have been exercised, and operational decisions are documented. A green demo alone is insufficient.
+
 ---
 
 ### WEEK 18 — Dec 14–20 · Open source week
@@ -268,6 +320,8 @@ Issue → Understand codebase → Fork → Branch → Implement → Test → PR 
 ```
 
 **Deliverable:** ≥ **2 serious PRs submitted** (no spam, no typo farming).
+
+Complete the OSS competency projects in `01 - Skills.md`; maintainer feedback and revisions are evidence, not interruptions.
 
 ---
 
@@ -321,14 +375,35 @@ Work however you want (2 hours one day, 8 another, zero when school demands). **
 
 > School comes first when necessary. No sacrificing academics for GitHub streaks.
 
+### Weekly execution
+
+1. Choose only the roadmap topics that realistically fit the week and create their rows/links in `03 - Project Archive.md`.
+2. Learn and rebuild each topic independently before beginning its named project.
+3. Keep topic projects proportional; do not add production ceremony that does not help prove the concept.
+4. Reuse passed competencies in the week's composition deliverable.
+5. On Sunday, evaluate every attempted topic separately in `02 - Weekly Tracker.md`.
+6. Check the original skill only after all four gates pass. Failed topics stay visible and return to the next realistic work block.
+
+Dates are planning constraints, not permission to fake mastery. If a topic fails, continue the roadmap where dependencies allow and schedule remediation; do not mark it complete to preserve the calendar.
+
 ---
 
 ## NON-NEGOTIABLE RULES
 
-1. **No tutorial hell** — watch → understand → close → rebuild from memory.
+1. **Every topic produces a project** — watch/read -> understand -> close -> rebuild -> break -> fix -> build -> explain.
 2. **AI allowed, but don't outsource your brain** — for every important piece of code, understand what it does, why it works, alternatives, failure modes, tradeoffs.
 3. **Build before you feel ready** — "I don't know enough" is not a reason to wait.
 4. **One flagship project** — `ONE GOOD PROJECT + REAL OSS CONTRIBUTIONS + SOLID FUNDAMENTALS`. That's the story.
+5. **Small proof is not portfolio obligation** — archive every topic project, but polish only the few composition projects that best demonstrate engineering depth.
+6. **Resources are disposable** — use the existing recommendation first, add another only for a specific gap, then stop watching and build.
+
+---
+
+## POST-JANUARY DESKTOP CONTINUATION
+
+Tauri is the planned convergence point, not a shortcut around Rust, TypeScript, web fundamentals, or operating-system interaction. After the January target, build one desktop developer utility by reusing a proven Rust core and TypeScript/React interface.
+
+The Tauri competency project should demonstrate commands and events, typed IPC boundaries, filesystem/process permissions, state, error propagation, packaging, and platform-aware behavior. Treat it as a portfolio project with tests for the Rust core, a reproducible build, screenshots/demo, architecture notes, and documented security decisions.
 
 ---
 
