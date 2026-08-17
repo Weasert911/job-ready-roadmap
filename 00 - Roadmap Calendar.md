@@ -36,12 +36,12 @@ TOPIC
   -> use the relevant resource and code along
   -> close the resource and rebuild from memory
   -> experiment, break it intentionally, and fix it
-  -> build the topic project in 01 - Skills.md
+  -> build the topic project in 01 - Learning System.md
   -> explain the concept and implementation
   -> PASS / FAIL
 ```
 
-Pass requires `Understanding = YES`, `Implementation = YES`, `Project = YES`, and `Explanation = YES`. A copied implementation, an unexplained implementation, or theory without working code is a fail. Record evidence in `02 - Weekly Tracker.md` and `03 - Project Archive.md`.
+Pass requires that you can build the core without help, explain how and why it works, and run the completed project. A copied implementation, an unexplained implementation, or theory without working code is a fail. Record the pass in `01 - Learning System.md`.
 
 Topic projects are focused competency proofs. Existing weekly deliverables are composition projects that combine those proofs into progressively more realistic software:
 
@@ -96,8 +96,7 @@ concept -> topic project -> composition project -> production system
 
 ### Deliverables
 - [ ] GitHub repository for learning/work log (created: `job-ready-roadmap`)
-- [ ] Skills document (`01 - Skills.md`)
-- [ ] Weekly tracker (`02 - Weekly Tracker.md`)
+- [ ] Learning system (`01 - Learning System.md`)
 
 ---
 
@@ -106,7 +105,7 @@ concept -> topic project -> composition project -> production system
 ### WEEK 1 — Aug 17–23 · Rust fundamentals
 **Learn:** variables, mutability, scalar/compound types, functions, expressions, control flow, ownership, borrowing, references, slices, structs, enums, `match`, `Option`, `Result`.
 
-**Topic evidence:** complete the matching Rust projects in `01 - Skills.md` for variables, functions/control flow, ownership/borrowing, and structs/enums/result modeling. Use Rustlings as practice, not proof.
+**Topic evidence:** complete the matching Rust projects in `01 - Learning System.md` for variables, functions/control flow, ownership/borrowing, and structs/enums/result modeling. Use Rustlings as practice, not proof.
 
 **Composition deliverable:** 3 small Rust programs (file analyzer, text statistics tool, terminal utility) that deliberately reuse the week's concepts.
 
@@ -321,7 +320,7 @@ Issue → Understand codebase → Fork → Branch → Implement → Test → PR 
 
 **Deliverable:** ≥ **2 serious PRs submitted** (no spam, no typo farming).
 
-Complete the OSS competency projects in `01 - Skills.md`; maintainer feedback and revisions are evidence, not interruptions.
+Complete the OSS competency projects in `01 - Learning System.md`; maintainer feedback and revisions are evidence, not interruptions.
 
 ---
 
@@ -377,12 +376,12 @@ Work however you want (2 hours one day, 8 another, zero when school demands). **
 
 ### Weekly execution
 
-1. Choose only the roadmap topics that realistically fit the week and create their rows/links in `03 - Project Archive.md`.
+1. Choose only the roadmap topics that realistically fit the week in `01 - Learning System.md`.
 2. Learn and rebuild each topic independently before beginning its named project.
 3. Keep topic projects proportional; do not add production ceremony that does not help prove the concept.
 4. Reuse passed competencies in the week's composition deliverable.
-5. On Sunday, evaluate every attempted topic separately in `02 - Weekly Tracker.md`.
-6. Check the original skill only after all four gates pass. Failed topics stay visible and return to the next realistic work block.
+5. On Sunday, use the three-question check in `01 - Learning System.md` for every attempted topic.
+6. Check the skill only after it passes. Failed topics stay visible and return to the next realistic work block.
 
 Dates are planning constraints, not permission to fake mastery. If a topic fails, continue the roadmap where dependencies allow and schedule remediation; do not mark it complete to preserve the calendar.
 

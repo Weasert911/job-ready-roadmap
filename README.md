@@ -16,10 +16,8 @@ Become a credible junior/intern/contract-level **systems + developer tooling eng
 
 | File | Purpose |
 | --- | --- |
-| `00 - Roadmap Calendar.md` | Full week-by-week calendar (phases, deliverables, Sunday standards) |
-| `01 - Skills.md` | Skill checklist, pass gates, and one proportionate project per topic |
-| `02 - Weekly Tracker.md` | Per-topic Sunday evaluations, weekly metrics, and remediation |
-| `03 - Project Archive.md` | Evidence ledger for topic, composition, and portfolio projects |
+| `01 - Learning System.md` | The only daily and weekly working file: checklist, active topics, Sunday check, history, and archive |
+| `00 - Roadmap Calendar.md` | Reference calendar for phases, weekly deliverables, and career direction |
 
 ## Weekly rhythm
 
@@ -44,7 +42,7 @@ Sunday = weekly deadline. School comes first when necessary.
 ## Evidence Flow
 
 ```text
-Topic -> focused project -> Sunday PASS/FAIL -> project archive
+Topic -> focused project -> Sunday PASS/FAIL -> completed-project row
       -> combined system -> production practices -> selected portfolio work
 ```
 
