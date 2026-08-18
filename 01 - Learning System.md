@@ -4,19 +4,19 @@
 
 ## This Week
 
-**Week:**
+**Week:** Week 1 - Rust Fundamentals
 
-**Dates:**
+**Dates:** Aug 17-23, 2026
 
-**Composition project:**
+**Composition project:** Not started
 
 Copy only the topics you will realistically attempt from the weekly checklist below.
 
-- [ ] Topic: | Project: | Status: NOT STARTED / BUILDING / PASS / FAIL
+- [ ] Topic: Variables, mutability, scalar and compound types | Project: `System Configuration Simulator` | Status: BUILDING
 - [ ] Topic: | Project: | Status: NOT STARTED / BUILDING / PASS / FAIL
 - [ ] Topic: | Project: | Status: NOT STARTED / BUILDING / PASS / FAIL
 
-**Next action:**
+**Next action:** Rebuild the simulator from memory, then complete the Sunday Check for the topic.
 
 ## Daily Loop
 
@@ -53,11 +53,11 @@ Weeks are recommended queues, not locks. Carry failed work forward, pull indepen
 
 ### P0 - Setup
 
-- [ ] **Git: everyday workflow** - `History Repair Lab` (Small)
+- [x] **Git: everyday workflow** - `History Repair Lab` (Small)
 
 ### Week 1 - Rust Fundamentals
 
-- [ ] **Variables, mutability, scalar and compound types** - `System Configuration Simulator` (Tiny)
+- [x] **[[Variables]], [[mutability]], [[scalar and compound types]]** - `System Configuration Simulator` (Tiny)
 - [ ] **Functions, expressions, and control flow** - `Exit-Code Decision Engine` (Tiny)
 - [ ] **Ownership, borrowing, references, and slices** - `Zero-Copy Argument Inspector` (Small)
 - [ ] **Structs, enums, match, Option, and Result** - `Build Result Modeler` (Small)
